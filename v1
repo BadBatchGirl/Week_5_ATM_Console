@@ -1,0 +1,32 @@
+check_bal = 500
+
+while True:
+    menu_choice = input("Would you like to [1]Check Balance [2]Deposit [3]Withdraw [4]Exit? ")
+
+    if menu_choice == "1":
+        print(f"Your current balance = ${check_bal}")   
+        
+    
+    elif menu_choice == "2": 
+        user_input = int(input("How much would you like to deposit? ")) 
+        check_bal = check_bal + user_input
+        print(f"Your new balance is: $ {check_bal} ") 
+        
+    elif menu_choice == "3":
+        withdraw_num = int(input("how much would you like to withdraw? "))
+        check_bal = check_bal - withdraw_num
+        print(f"your new balance: $ {check_bal} ")
+        
+    elif menu_choice == "4":
+        print("Thank you. Have a nice day!")
+        
+    else:
+        print("Please enter a valid choice.")
+        
+    keep_going = input("Would you like to make another transaction? ")
+    if keep_going == "yes":
+        print(menu_choice)
+    
+    elif keep_going == "no":
+        print("Thank you. Have a nice day!") 
+        break
