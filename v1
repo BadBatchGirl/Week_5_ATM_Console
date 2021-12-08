@@ -25,7 +25,7 @@ while True:
         
     keep_going = input("Would you like to make another transaction? ")
     if keep_going == "yes":
-        print(menu_choice)
+        continue
     
     elif keep_going == "no":
         print("Thank you. Have a nice day!") 
